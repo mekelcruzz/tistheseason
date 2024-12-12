@@ -7,7 +7,7 @@ const PAYMONGO_SECRET_KEY = 'sk_test_Uarb4zRpXZb9PXmTHeK1ZTEp';
 const axios = require('axios');
 const pool = require('../db'); 
 const admin = 14;
-
+const port = process.env.PORT || 4000;
 
 
 const feedback = require('./feedback/routes');
@@ -20,7 +20,7 @@ const purchases = require('./purchases/routes');
 
 
 const app = express();
-const port = process.env.PORT;
+
 
 app.use(cors()); 
 app.use('/uploads', express.static('uploads'));
